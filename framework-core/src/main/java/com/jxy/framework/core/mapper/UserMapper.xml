@@ -3,7 +3,7 @@
 <mapper namespace="com.jxy.framework.core.mapper.UserMapper">
 
   <select id="findById" resultType="com.jxy.framework.core.entity.User">
-    <![CDATA[select #{id} as id from dual;]]>
+    <![CDATA[select * from sys_user where id=#{id};]]>
   </select>
 
 </mapper>

@@ -1,6 +1,8 @@
 package com.jxy.framework.core.entity;
 
 import java.io.Serializable;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 /**
  * 用户信息实体类
@@ -52,9 +54,24 @@ public class User implements Serializable {
     private String email;
 
     /**
+     * 生日
+     */
+    private LocalDate birthday;
+
+    /**
      * 地址
      */
     private String address;
+
+    /**
+     * 创建时间
+     */
+    private LocalDateTime createTime;
+
+    /**
+     * 修改时间
+     */
+    private LocalDateTime modifyTime;
 
     /**
      * @return 主键ID
@@ -169,6 +186,20 @@ public class User implements Serializable {
     }
 
     /**
+     * @return birthday 生日
+     */
+    public LocalDate getBirthday() {
+        return birthday;
+    }
+
+    /**
+     * @param birthday 生日
+     */
+    public void setBirthday(LocalDate birthday) {
+        this.birthday = birthday;
+    }
+
+    /**
      * @return 地址
      */
     public String getAddress() {
@@ -182,13 +213,43 @@ public class User implements Serializable {
         this.address = address;
     }
 
+    /**
+     * @return createTime 创建时间
+     */
+    public LocalDateTime getCreateTime() {
+        return createTime;
+    }
+
+    /**
+     * @param createTime 创建时间
+     */
+    public void setCreateTime(LocalDateTime createTime) {
+        this.createTime = createTime;
+    }
+
+    /**
+     * @return modifyTime 修改时间
+     */
+    public LocalDateTime getModifyTime() {
+        return modifyTime;
+    }
+
+    /**
+     * @param modifyTime 修改时间
+     */
+    public void setModifyTime(LocalDateTime modifyTime) {
+        this.modifyTime = modifyTime;
+    }
+
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
         builder.append("User [id=").append(id).append(", username=").append(username)
                 .append(", name=").append(name).append(", nickname=").append(nickname)
                 .append(", gender=").append(gender).append(", mobile=").append(mobile)
-                .append(", email=").append(email).append(", address=").append(address).append("]");
+                .append(", email=").append(email).append(", birthday=").append(birthday)
+                .append(", address=").append(address).append(", createTime=").append(createTime)
+                .append(", modifyTime=").append(modifyTime).append("]");
         return builder.toString();
     }
 
