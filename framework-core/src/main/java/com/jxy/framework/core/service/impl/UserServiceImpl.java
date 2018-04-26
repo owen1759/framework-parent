@@ -11,12 +11,12 @@ import com.jxy.framework.core.service.IUserService;
 @Service
 public class UserServiceImpl implements IUserService {
 
-  @Resource
-  private UserMapper userMapper;
+    @Resource
+    private UserMapper userMapper;
 
-  @Override
-  public User findById(int id) {
-    return userMapper.findById(id);
-  }
+    @Override
+    public User findById(int id) {
+        return userMapper.findById(id);
+    }
 
 }

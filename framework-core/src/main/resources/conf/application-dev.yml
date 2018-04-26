@@ -5,4 +5,6 @@ spring:
     hikari:
       catalog: framework
     username: root
-    password: 12345
+    password: 1234
+logging:
+  config: classpath:conf/logback.xml
