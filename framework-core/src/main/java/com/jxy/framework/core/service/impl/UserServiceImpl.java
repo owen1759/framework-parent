@@ -4,7 +4,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
-import com.jxy.framework.core.entity.User;
+import com.jxy.framework.core.entity.UserEntity;
 import com.jxy.framework.core.mapper.UserMapper;
 import com.jxy.framework.core.service.IUserService;
 
@@ -15,7 +15,7 @@ public class UserServiceImpl implements IUserService {
   private UserMapper userMapper;
 
   @Override
-  public User findById(int id) {
+  public UserEntity findById(int id) {
     return userMapper.findById(id);
   }
 

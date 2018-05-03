@@ -2,8 +2,16 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.jxy.framework.core.mapper.UserMapper">
 
-  <select id="findById" resultType="com.jxy.framework.core.entity.User">
+  <select id="findById" resultType="com.jxy.framework.core.entity.UserEntity">
     <![CDATA[select * from sys_user where id=#{id};]]>
   </select>
+
+  <!-- 新建用户信息 -->
+  <insert id="insertUser" parameterType="com.jxy.framework.core.entity.UserEntity">
+    <![CDATA[
+    insert into `sys_user` (`username`, `password`, `name`, `nickname`, `gender`, `mobile`, `email`, `birthday`)
+    values (#{username}, #{password}, #{name}, #{nickname}, #{gender}, #{mobile}, #{email}, #{birthday});
+    ]]>
+  </insert>
 
 </mapper>

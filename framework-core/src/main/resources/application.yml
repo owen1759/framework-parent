@@ -5,3 +5,4 @@ spring:
 server:
   servlet:
     context-path: /framework
+  port: 80

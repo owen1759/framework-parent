@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
  * @author JiangXiangyu
  * @since 2018-04-09
  */
-public class User implements Serializable {
+public class UserEntity implements Serializable {
 
     private static final long serialVersionUID = -4946017737613690407L;
 
@@ -244,12 +244,12 @@ public class User implements Serializable {
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
-        builder.append("User [id=").append(id).append(", username=").append(username)
-                .append(", name=").append(name).append(", nickname=").append(nickname)
-                .append(", gender=").append(gender).append(", mobile=").append(mobile)
-                .append(", email=").append(email).append(", birthday=").append(birthday)
-                .append(", address=").append(address).append(", createTime=").append(createTime)
-                .append(", modifyTime=").append(modifyTime).append("]");
+        builder.append("UserEntity [id=").append(id).append(", username=").append(username)
+                .append(", password=").append(password).append(", name=").append(name)
+                .append(", nickname=").append(nickname).append(", gender=").append(gender)
+                .append(", mobile=").append(mobile).append(", email=").append(email)
+                .append(", birthday=").append(birthday).append(", address=").append(address)
+                .append(", createTime=").append(createTime).append(", modifyTime=").append(modifyTime).append("]");
         return builder.toString();
     }
 
