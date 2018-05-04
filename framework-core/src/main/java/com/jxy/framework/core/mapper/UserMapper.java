@@ -2,7 +2,7 @@ package com.jxy.framework.core.mapper;
 
 import org.springframework.dao.DataAccessException;
 
-import com.jxy.framework.core.entity.User;
+import com.jxy.framework.core.entity.UserEntity;
 
 /**
  * 用户信息管理Dao层
@@ -17,6 +17,14 @@ public interface UserMapper {
      * @return 用户信息
      * @throws DataAccessException
      */
-    User findById(int id);
+    UserEntity findById(int id);
+
+    /**
+     * 新建用户信息
+     * @param user 用户信息
+     * @return 受影响的记录数
+     * @throws DataAccessException
+     */
+    int insertUser(UserEntity user);
 
 }
